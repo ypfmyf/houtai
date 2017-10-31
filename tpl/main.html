@@ -1,0 +1,249 @@
+<!--主页-->
+<nav class="navbar navbar-default navbar-fixed-top conyanseMa">
+    <div class="container-fluid confna">
+        <div class="navbar-header topleft">
+            <img src="img/logo.png" alt=""/>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav gmmcwx ">
+                <li ng-class='{xianA:isxi1}' ng-click="neClick1()">
+                    <a ui-sref="Home">
+                        <img src="img/icon01.png" alt=""/>
+                        <br/>
+                        首页
+                    </a>
+                </li>
+                <li ng-class='{xianA:isxi2}' ng-click="neClick2()">
+                    <a ui-sref="Data">
+                        <img src="img/icon02.png" alt=""/>
+                        <br/>
+                        数据管理
+                    </a>
+                </li>
+                <li ng-class='{xianA:isxi3}' ng-click="neClick3()">
+                    <a ui-sref="Picasa">
+                        <img src="img/icon03.png" alt=""/>
+                        <br/>
+                        图片设计
+                    </a>
+                </li>
+                <li ng-class='{xianA:isxi4}' ng-click="neClick4()">
+                    <a ui-sref="Home">
+                        <img src="img/icon04.png" alt=""/>
+                        <br/>
+                       常用工具
+                    </a>
+                </li>
+                <li ng-class='{xianA:isxi5}' ng-click="neClick5()">
+                    <a ui-sref="Home">
+                        <img src="img/icon05.png" alt=""/>
+                        <br/>
+                        文件管理
+                    </a>
+                </li>
+                <li ng-class='{xianA:isxi6}' ng-click="neClick6()">
+                    <a ui-sref="Home">
+                        <img src="img/icon06.png" alt=""/>
+                        <br/>
+                        系统设置
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right topright">
+                <li>
+                    <span>
+                        <img src="img/help.png" title="帮助"/>
+                        <a href="#">帮助</a>
+                    </span>
+                </li>
+                <li>
+                    <span><a href="#">关于</a></span>
+                </li>
+                <li>
+                    <span><a href="#/Login" target="_parent">退出</a></span>
+                </li>
+                <br/>
+                <li class="user">
+                    <div>
+                        <span class="glyphicon glyphicon-user"> 余鹏飞</span>
+                        <i>消息</i>
+                        <b>5</b>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col col-md-2 colList">
+                <div class="list-group guanligro  tongxun">
+                    <a class="list-group-item active">
+                        <i></i>
+                        通讯录
+                    </a>
+                </div>
+                <div class="panel panel-default guanlipan">
+                    <div class="panel-heading guantu" ng-click="showSet01=!showSet01">
+                        <img src="img/leftico01.png" />
+                        管理信息
+                    </div>
+                    <ul class="list-group" ng-hide="showSet01">
+                        <li >
+                            <a ui-sref="Home"  class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                首页模板
+                            </a>
+                        </li>
+                        <li>
+                            <a  class="list-group-item" ui-sref="Data">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                数据列表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Picture" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                图片数据表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Picasa" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                图片列表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Information" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                商品信息管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel panel-default guanlipan">
+                    <div class="panel-heading guantu" ng-click="showSet=!showSet">
+                        <img src="img/leftico02.png" />
+                        商城
+                    </div>
+                    <ul class="list-group" ng-show="showSet">
+                        <li>
+                            <a class="list-group-item" ui-sref="Management">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                商品管理
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="Data" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                订单管理</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Users" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                用户管理</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Compile" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                会员管理</a>
+                        </li>
+                        <li>
+                            <a ui-sref="" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                活动管理
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="Deliver" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                发货管理
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                配送管理
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                配送管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel panel-default guanlipan">
+                    <div class="panel-heading guantu" ng-click="showEditor=!showEditor">
+                        <img src="img/leftico03.png"/>
+                        客服
+                    </div>
+                    <ul class="list-group" ng-show="showEditor">
+                        <li>
+                            <a class="list-group-item" ui-sref="Home">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                首页模板
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="Data" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                数据列表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Picture" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                图片数据表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Compile" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                添加编辑</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Information" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                信息管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel panel-default guanlipan">
+                    <div class="panel-heading guantu" ng-click="showDate=!showDate">
+                        <img src="img/leftico04.png" />
+                        统计
+                    </div>
+                    <ul class="list-group" ng-show="showDate">
+                        <li>
+                            <a class="list-group-item" ui-sref="Home">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                首页模板
+                            </a>
+                        </li>
+                        <li>
+                            <a ui-sref="Data" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                数据列表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Picture" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                图片数据表</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Compile" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                添加编辑</a>
+                        </li>
+                        <li>
+                            <a ui-sref="Information" class="list-group-item">
+                                <i class="glyphicon glyphicon-triangle-right"></i>
+                                信息管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col colUiV">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+</nav>
+

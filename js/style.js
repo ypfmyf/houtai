@@ -1,0 +1,142 @@
+/**
+ * Created by Administrator on 2017/9/29 0029.
+ */
+var app=angular.module('tianyuan',['ng','ui.router']);
+app.config(function($stateProvider,$urlRouterProvider){
+    $stateProvider
+        .state('Login',{
+            url:'/myLogin',
+            templateUrl:'tpl/login.html',
+            controller:'loginCtrl'
+        })
+        .state('Main',{
+            url:'/myMain',
+            templateUrl:'tpl/main.html',
+            controller:'mainCtrl'
+        })
+        .state('Home',{
+            url:'/myHome',
+            templateUrl:'tpl/ma/home.html',
+            parent:'Main'
+        })
+        .state('Data',{
+            url:'/mydata',
+            templateUrl:'tpl/ma/data.html',
+            parent:'Main',
+            controller:'DataCtrl'
+        })
+        .state('Picture',{
+            url:'/mypicture',
+            templateUrl:'tpl/ma/picture.html',
+            parent:'Main'
+
+        })
+        .state('Information',{
+            url:'/myInformation',
+            templateUrl:'tpl/ma/information.html',
+            parent:'Main'
+        })
+        .state('Compile',{
+            url:'/myCompile',
+            templateUrl:'tpl/ma/compile.html',
+            parent:'Main'
+        })
+        .state('Picasa',{
+            url:'/myPicasa',
+            templateUrl:'tpl/ma/picasa.html',
+            parent:'Main'
+        })
+        .state('Management',{
+            url:'/myManagement',
+            templateUrl:'tpl/ma/management.html',
+            parent:'Main'
+        })
+        .state('Users',{
+            url:'/myUsers',
+            templateUrl:'tpl/ma/users.html',
+            parent:'Main'
+        })
+        .state('Deliver',{
+            url:'/myDeliver',
+            templateUrl:'tpl/ma/deliver.html',
+            parent:'Main'
+        })
+    ;
+    $urlRouterProvider.otherwise('/myLogin');
+});
+app.controller('parentCtrl',['$scope','$location',function($scope,$location){
+    $scope.jump=function(data){
+        $location.path(data);
+    }
+}]);
+//登录页面
+app.controller('loginCtrl',['$scope',function($scope){
+
+}]);
+//首页
+app.controller('mainCtrl',['$scope',function($scope){
+    $scope.isxi1=true;
+    $scope.isxi2=false;
+    $scope.isxi3=false;
+    $scope.isxi4=false;
+    $scope.isxi5=false;
+    $scope.isxi6=false;
+    $scope.neClick1=function(){
+        $scope.isxi1=true;
+        $scope.isxi2=false;
+        $scope.isxi3=false;
+        $scope.isxi4=false;
+        $scope.isxi5=false;
+        $scope.isxi6=false;
+    };
+    $scope.neClick2=function(){
+        $scope.isxi2=true;
+        $scope.isxi1=false;
+        $scope.isxi3=false;
+        $scope.isxi4=false;
+        $scope.isxi5=false;
+        $scope.isxi6=false;
+    };
+    $scope.neClick3=function(){
+        $scope.isxi3=true;
+        $scope.isxi1=false;
+        $scope.isxi2=false;
+        $scope.isxi4=false;
+        $scope.isxi5=false;
+        $scope.isxi6=false;
+    };
+    $scope.neClick4=function(){
+        $scope.isxi4=true;
+        $scope.isxi1=false;
+        $scope.isxi2=false;
+        $scope.isxi3=false;
+        $scope.isxi5=false;
+        $scope.isxi6=false;
+    };
+    $scope.neClick5=function(){
+        $scope.isxi5=true;
+        $scope.isxi1=false;
+        $scope.isxi2=false;
+        $scope.isxi3=false;
+        $scope.isxi4=false;
+        $scope.isxi6=false;
+    };
+    $scope.neClick6=function(){
+        $scope.isxi6=true;
+        $scope.isxi1=false;
+        $scope.isxi2=false;
+        $scope.isxi3=false;
+        $scope.isxi4=false;
+        $scope.isxi5=false;
+    }
+}]);
+
+app.controller("DataCtrl",['$scope',function($scope) {
+    $scope.shanchutr=true;
+    $scope.clear=function(index){
+        alert("删除成功");
+        $scope.shanchutr="";
+        $scope.shanchutr.splice(index,1);
+    };
+
+}]);
